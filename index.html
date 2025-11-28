@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة النخبة - الإرشاد الأكاديمي والمهني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>النخبة</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">الميزات</a></li>
+                <li><a href="#about">عن المنصة</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary" onclick="window.location.href='#login'">دخول</button>
+                <button class="btn btn-primary" onclick="window.location.href='#signup'">إنشاء حساب</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>منصة النخبة للإرشاد الأكاديمي والمهني</h1>
+            <p>منصة متكاملة لدعم رحلتك الأكاديمية والمهنية مع موارد تعليمية منظمة وإرشادات متخصصة</p>
+            <div class="hero-buttons">
+                <button class="btn btn-light" onclick="alert('تم الضغط على بدء التعلم')"><i class="fas fa-play-circle"></i> بدء التعلم</button>
+                <button class="btn btn-secondary" style="background: rgba(255,255,255,0.1); color: white; border-color: white;" onclick="document.querySelector('#features').scrollIntoView({behavior:'smooth'})">اعرف المزيد</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <h2 class="section-title">ميزات المنصة</h2>
+            <p class="section-subtitle">اكتشف كل ما تحتاجه لنجاحك الأكاديمي والمهني</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-compass"></i></div>
+                    <h3>نظام توجيهي متكامل</h3>
+                    <p>اختبارات تقييم ميول وقدرات شاملة لمساعدتك في اختيار التخصص المناسب</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-books"></i></div>
+                    <h3>مكتبة أكاديمية منظمة</h3>
+                    <p>ملخصات وأسئلة وتسجيلات شرح منظمة وسهلة البحث والتصفية</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3>مجتمع دعم تعاوني</h3>
+                    <p>منتديات نقاش متخصصة لتبادل الخبرات والإجابة على الاستفسارات</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-edit"></i></div>
+                    <h3>نظام اختبارات ذكي</h3>
+                    <p>اختبارات محاكاة بآلية MCQ مع تحليل مفصل للأداء والتقارير</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>تقارير وإحصائيات</h3>
+                    <p>متابعة تقدمك وتحليل أدائك مع رسوم بيانية توضيحية</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>متاح في كل مكان</h3>
+                    <p>استخدم المنصة من أي جهاز في أي وقت ومن أي مكان</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">طالب منتسب</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">مورد تعليمي</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">تخصص وبرنامج</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">معدل الرضا</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <h2 class="section-title">آراء الطلاب</h2>
+            <p class="section-subtitle">اسمع من الطلاب الذين استفادوا من المنصة</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"منصة رائعة ساعدتني في اختيار التخصص المناسب وتوفير كل الموارد التي احتاجها"</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">أ</div>
+                        <div class="author-info">
+                            <h4>أحمد محمد</h4>
+                            <p>طالب السنة الأولى</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"الاختبارات المحاكاة ساعدتني كثيراً في التحضير والحصول على درجات عالية"</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ف</div>
+                        <div class="author-info">
+                            <h4>فاطمة علي</h4>
+                            <p>طالبة السنة الثانية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"المنتدى مفيد جداً والطلاب متعاونين. حصلت على إجابات مفيدة لكل تساؤلاتي"</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">م</div>
+                        <div class="author-info">
+                            <h4>مريم حسن</h4>
+                            <p>طالبة متخرجة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-container">
+            <h2>هل أنت مستعد للبدء؟</h2>
+            <p>انضم إلى آلاف الطلاب الذين بدأوا رحلتهم نحو النجاح الأكاديمي والمهني</p>
+            <button class="btn btn-light" style="font-size: 1.1rem; padding: 0.8rem 2rem;" onclick="window.location.href='dashboard.html'">انشئ حسابك الآن مجاناً</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>عن المنصة</h4>
+                <ul>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">أهدافنا</a></li>
+                    <li><a href="#">فريقنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>الخدمات</h4>
+                <ul>
+                    <li><a href="library.html">المكتبة</a></li>
+                    <li><a href="exams.html">الاختبارات</a></li>
+                    <li><a href="forum.html">المنتدى</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>الدعم</h4>
+                <ul>
+                    <li><a href="#">مركز المساعدة</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>متابعنا</h4>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i> فيسبوك</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> تويتر</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> انستغرام</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 منصة النخبة - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

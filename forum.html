@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتدى النقاش - منصة النخبة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .forum-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .forum-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .new-topic-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .new-topic-btn:hover {
+            background: #003FA3;
+            transform: translateY(-2px);
+        }
+
+        .topic-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .topic-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 0.8rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-right: 4px solid var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .topic-item:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transform: translateX(-5px);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.8rem;
+        }
+
+        .topic-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            flex-grow: 1;
+        }
+
+        .topic-status {
+            background: var(--success);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 0.3rem;
+            font-size: 0.85rem;
+        }
+
+        .topic-author {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-preview {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .topic-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .topic-stats {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fas fa-graduation-cap"></i>
+                <span>النخبة</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">لوحة التحكم</a></li>
+                <li><a href="library.html">المكتبة</a></li>
+                <li><a href="forum.html">المنتدى</a></li>
+                <li><a href="exams.html">الاختبارات</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary" onclick="alert('تم تسجيل الخروج')">تسجيل خروج</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Forum Content -->
+    <div class="forum-container">
+        <div class="forum-header">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">منتدى النقاش</h1>
+            <p style="color: var(--text-light); font-size: 1.1rem;">شارك أسئلتك وخبراتك مع الطلاب الآخرين</p>
+        </div>
+
+        <button class="new-topic-btn" onclick="alert('فتح نموذج إنشاء موضوع جديد')">📝 إنشاء موضوع جديد</button>
+
+        <div class="topic-list">
+            <div class="topic-item">
+                <div class="topic-header">
+                    <div class="topic-title">كيف أختار التخصص المناسب؟</div>
+                    <div class="topic-status">مجاب ✓</div>
+                </div>
+                <div class="topic-author">👤 أحمد محمد • منذ ساعتين</div>
+                <div class="topic-preview">أنا في السنة الأولى وأتردد بين عدة تخصصات. كيف يمكنني اختيار ما يناسب قدراتي وميولي؟</div>
+                <div class="topic-footer">
+                    <div class="topic-stats">
+                        <div class="stat">💬 8 ردود</div>
+                        <div class="stat">👁️ 245 مشاهدة</div>
+                        <div class="stat">💚 15 إعجاب</div>
+                    </div>
+                    <span>آخر رد: قبل 30 دقيقة</span>
+                </div>
+            </div>
+
+            <div class="topic-item">
+                <div class="topic-header">
+                    <div class="topic-title">ملخصات مقرر الرياضيات 101</div>
+                    <div class="topic-status">مجاب ✓</div>
+                </div>
+                <div class="topic-author">👤 فاطمة علي • منذ يوم</div>
+                <div class="topic-preview">هل لديكم ملخصات أو أسئلة لمقرر الرياضيات 101؟ أبحث عن موارد إضافية للمراجعة...</div>
+                <div class="topic-footer">
+                    <div class="topic-stats">
+                        <div class="stat">💬 12 ردود</div>
+                        <div class="stat">👁️ 320 مشاهدة</div>
+                        <div class="stat">💚 28 إعجاب</div>
+                    </div>
+                    <span>آخر رد: قبل 2 ساعة</span>
+                </div>
+            </div>
+
+            <div class="topic-item">
+                <div class="topic-header">
+                    <div class="topic-title">نصائح للتحضير للامتحانات</div>
+                    <div class="topic-status">نقاش</div>
+                </div>
+                <div class="topic-author">👤 محمود حسن • منذ 3 أيام</div>
+                <div class="topic-preview">تعالوا نشارك نصائحنا الشخصية للتحضير الفعّال للامتحانات. ما هي استراتيجياتكم الناجحة؟</div>
+                <div class="topic-footer">
+                    <div class="topic-stats">
+                        <div class="stat">💬 23 ردود</div>
+                        <div class="stat">👁️ 550 مشاهدة</div>
+                        <div class="stat">💚 42 إعجاب</div>
+                    </div>
+                    <span>آخر رد: قبل 1 ساعة</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom" style="text-align: center; border-top: 1px solid #3C4043; padding-top: 2rem;">
+            <p>&copy; 2025 منصة النخبة - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

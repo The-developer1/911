@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المكتبة الأكاديمية - منصة النخبة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .library-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .library-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 500px;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--border);
+            background: var(--white);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+            color: var(--primary-color);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .resource-card {
+            background: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .resource-header {
+            background: linear-gradient(135deg, var(--primary-color), #003FA3);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .resource-type {
+            display: inline-block;
+            background: rgba(255,255,255,0.3);
+            padding: 0.3rem 0.8rem;
+            border-radius: 0.3rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-body {
+            padding: 1.5rem;
+        }
+
+        .resource-subject {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .resource-description {
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .resource-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .resource-downloads {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .btn-download {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background: #003FA3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fas fa-graduation-cap"></i>
+                <span>النخبة</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">لوحة التحكم</a></li>
+                <li><a href="library.html">المكتبة</a></li>
+                <li><a href="forum.html">المنتدى</a></li>
+                <li><a href="exams.html">الاختبارات</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary" onclick="alert('تم تسجيل الخروج')">تسجيل خروج</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Library Content -->
+    <div class="library-container">
+        <div class="library-header">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">المكتبة الأكاديمية</h1>
+            <p style="color: var(--text-light); font-size: 1.1rem;">ابحث عن الموارد التعليمية التي تحتاجها</p>
+        </div>
+
+        <input type="text" class="search-bar" placeholder="🔍 ابحث عن ملخص أو سؤال...">
+
+        <div class="filters">
+            <button class="filter-btn active">جميع الموارد</button>
+            <button class="filter-btn">ملخصات</button>
+            <button class="filter-btn">أسئلة</button>
+            <button class="filter-btn">تسجيلات</button>
+            <button class="filter-btn">مراجع</button>
+        </div>
+
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="resource-header">
+                    <div class="resource-type">ملخص</div>
+                    <div class="resource-title">الرياضيات المتقدمة</div>
+                </div>
+                <div class="resource-body">
+                    <div class="resource-subject">📚 التفاضل والتكامل</div>
+                    <div class="resource-description">ملخص شامل لمادة التفاضل والتكامل يغطي جميع المواضيع الأساسية</div>
+                    <div class="resource-footer">
+                        <span class="resource-downloads">📥 2.5K</span>
+                        <button class="btn-download">تحميل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-header">
+                    <div class="resource-type">أسئلة</div>
+                    <div class="resource-title">بنك أسئلة الفيزياء</div>
+                </div>
+                <div class="resource-body">
+                    <div class="resource-subject">🔬 الفيزياء العامة</div>
+                    <div class="resource-description">500 سؤال محلول في الفيزياء مع شرح مفصل للإجابات</div>
+                    <div class="resource-footer">
+                        <span class="resource-downloads">📥 1.8K</span>
+                        <button class="btn-download">تحميل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-header">
+                    <div class="resource-type">تسجيل</div>
+                    <div class="resource-title">محاضرة الكيمياء العضوية</div>
+                </div>
+                <div class="resource-body">
+                    <div class="resource-subject">🧪 الكيمياء</div>
+                    <div class="resource-description">تسجيل محاضرة كاملة عن الكيمياء العضوية بمدة 120 دقيقة</div>
+                    <div class="resource-footer">
+                        <span class="resource-downloads">📥 3.2K</span>
+                        <button class="btn-download">تحميل</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>عن المنصة</h4>
+                <ul>
+                    <li><a href="#">من نحن</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>الخدمات</h4>
+                <ul>
+                    <li><a href="library.html">المكتبة</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>الدعم</h4>
+                <ul>
+                    <li><a href="#">مركز المساعدة</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 منصة النخبة - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
